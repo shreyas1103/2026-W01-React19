@@ -10,5 +10,9 @@ let employees = {
     ]
 }
 // print last 3 skilss of employee
-let _skills = employees.skills;
-console.log(_skills.slice(-3));
+let _skills = [...employees.skills];   // is read as as spread operator used to copy array 
+console.log(_skills);
+
+// add on more skill to employee
+employees = {...employees, skills : [...employees.skills , "react"]}  // is read as spread operator used to copy array and object
+console.log(employees);
